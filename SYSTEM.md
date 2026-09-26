@@ -15,3 +15,10 @@
 - **Styling:** Tailwind CSS (Modern classes, responsive prefixes)
 - **State & Routing:** Zustand, React Router DOM, TanStack Query
 - **Maps & Geolocation:** Leaflet, OpenStreetMap, OSRM Routing Machine
+
+## 4. Codebase & Project Aktif
+- **Project Dishub Baru (Trans Koetaradja):** Tersimpan utuh di `project-dishub-baru/` di dalam otak kamu (`chipai-brain`).
+  - Frontend: `project-dishub-baru/frontend/` (React, Tailwind, Leaflet)
+  - Admin Dashboard: `project-dishub-baru/dashboard-admin/`
+  - Backend: `project-dishub-baru/backend/`
+  - Design Skills: `project-dishub-baru/.agents/skills/` (antislop, design taste)
