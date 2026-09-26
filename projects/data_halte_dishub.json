@@ -1,0 +1,1300 @@
+{
+  "koridor_1": [
+    {
+      "no": 1,
+      "nama": "HALTE KEUDAH",
+      "lat": 5.559781,
+      "lng": 95.317649,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 2,
+      "nama": "HALTE PORTABLE MASJID RAYA",
+      "lat": 5.553979,
+      "lng": 95.31854,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 3,
+      "nama": "HALTE SP. LIMA",
+      "lat": 5.556597,
+      "lng": 95.323211,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 4,
+      "nama": "HALTE KP. KEURAMAT",
+      "lat": 5.55821,
+      "lng": 95.327378,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 5,
+      "nama": "HALTE PORTABLE SP. JAMBO TAPE",
+      "lat": 5.559729,
+      "lng": 95.330911,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 6,
+      "nama": "HALTE RSUZA",
+      "lat": 5.565763,
+      "lng": 95.337352,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 7,
+      "nama": "HALTE KANTOR GUB. ACEH",
+      "lat": 5.571251,
+      "lng": 95.342931,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 8,
+      "nama": "HALTE LINGKE",
+      "lat": 5.575517,
+      "lng": 95.34732,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 9,
+      "nama": "HALTE PORTABLE SP. MESRA",
+      "lat": 5.58042,
+      "lng": 95.353206,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 10,
+      "nama": "HALTE PORTABLE LAMNYONG",
+      "lat": 5.575038,
+      "lng": 95.35543,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 11,
+      "nama": "HALTE FAKULTAS TEKNIK",
+      "lat": 5.566064,
+      "lng": 95.366778,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 12,
+      "nama": "HALTE FAKULTAS KEDOKTERAN",
+      "lat": 5.564918,
+      "lng": 95.372027,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 13,
+      "nama": "HALTE PORTABLE FAKULTAS PERTANIAN",
+      "lat": 5.566133,
+      "lng": 95.371822,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 14,
+      "nama": "HALTE MASJID JAMI'",
+      "lat": 5.571456,
+      "lng": 95.371424,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 15,
+      "nama": "HALTE PORTABLE SMA LIMA",
+      "lat": 5.574906,
+      "lng": 95.367055,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 16,
+      "nama": "HALTE LAMNYONG",
+      "lat": 5.575536,
+      "lng": 95.355065,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 17,
+      "nama": "HALTE SP. MESRA",
+      "lat": 5.579951,
+      "lng": 95.352974,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 18,
+      "nama": "HALTE PRADA",
+      "lat": 5.573958,
+      "lng": 95.345972,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 19,
+      "nama": "HALTE DPKA",
+      "lat": 5.570738,
+      "lng": 95.342698,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 20,
+      "nama": "HALTE RSUZA",
+      "lat": 5.564713,
+      "lng": 95.336554,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 21,
+      "nama": "HALTE PORTABLE JAMBO TAPE",
+      "lat": 5.559908,
+      "lng": 95.33142,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 22,
+      "nama": "HALTE KP. KEURAMAT",
+      "lat": 5.55795,
+      "lng": 95.327167,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 23,
+      "nama": "HALTE PORTABLE SP. LIMA",
+      "lat": 5.556219,
+      "lng": 95.322956,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 24,
+      "nama": "HALTE PEUNAYONG",
+      "lat": 5.558637,
+      "lng": 95.318945,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 25,
+      "nama": "HALTE PORTABLE EKONOMI UNSYIAH",
+      "lat": 5.573954,
+      "lng": 95.365612,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 26,
+      "nama": "HALTE PORTABLE BEURABONG",
+      "lat": 5.568054,
+      "lng": 95.377066,
+      "koridor": "Koridor 1"
+    }
+  ],
+  "koridor_2": [
+    {
+      "no": 1,
+      "nama": "HALTE PELABUHAN ULEE LHEUE TIPE A",
+      "lat": 5.564047,
+      "lng": 95.292068,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 2,
+      "nama": "HALTE KUBURAN MASSAL 1 ULEE LHEUE",
+      "lat": 5.555766,
+      "lng": 95.285874,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 3,
+      "nama": "HALTE KUBURAN MASSAL 2 ULEE LHEUE (seberang)",
+      "lat": 5.555576,
+      "lng": 95.285798,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 4,
+      "nama": "HALTE PUNGE 1 (Seberang kantor WIKA)",
+      "lat": 5.550702,
+      "lng": 95.306764,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 5,
+      "nama": "HALTE PASAR ACEH BARU",
+      "lat": 5.555505,
+      "lng": 95.31606,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 6,
+      "nama": "HALTE MASJID RAYA BAITURRAHMAN",
+      "lat": 5.554093,
+      "lng": 95.318361,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 7,
+      "nama": "HALTE Sp. SURABAYA 1 (depan Dunia Barusa)",
+      "lat": 5.542107,
+      "lng": 95.330246,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 8,
+      "nama": "HALTE Sp. SURABAYA 2 (depan Wong Solo)",
+      "lat": 5.547179,
+      "lng": 95.330122,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 9,
+      "nama": "HALTE Sp. BATOH 1 (Simpang AMD)",
+      "lat": 5.534133,
+      "lng": 95.330384,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 10,
+      "nama": "HALTE Sp. BATOH 2 (seberang SPBU BATOH)",
+      "lat": 5.535071,
+      "lng": 95.330133,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 11,
+      "nama": "HALTE DEPAN TERMINAL BATOH 1",
+      "lat": 5.529697,
+      "lng": 95.330137,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 12,
+      "nama": "HALTE DEPAN TERMINAL BATOH 2 (seberang)",
+      "lat": 5.529722,
+      "lng": 95.330331,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 13,
+      "nama": "HALTE DARUL IMARAH 1 (Depan SMA 1 DARUL IMARAH)",
+      "lat": 5.514488,
+      "lng": 95.331001,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 14,
+      "nama": "HALTE DARUL IMARAH 2 (Sp. LAMPEUNEURUT)",
+      "lat": 5.514853,
+      "lng": 95.330035,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 15,
+      "nama": "HALTE SIRON 1 (DEPAN SD SIRON)",
+      "lat": 5.511284,
+      "lng": 95.362883,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 16,
+      "nama": "HALTE SIRON 2 (DEPAN CLINIC PMI SIRON)",
+      "lat": 5.511184,
+      "lng": 95.363218,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 17,
+      "nama": "HALTE GANI 1 (DEPAN SD GANI)",
+      "lat": 5.513257,
+      "lng": 95.380454,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 18,
+      "nama": "HALTE GANI 2 (DEPAN PUSTU GANI)",
+      "lat": 5.513257,
+      "lng": 95.380454,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 19,
+      "nama": "HALTE BLANG BINTANG 1 (depan Masjid)",
+      "lat": 5.510991,
+      "lng": 95.41392,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 20,
+      "nama": "HALTE BLANG BINTANG 2 (bundaran LANUD)",
+      "lat": 5.510519,
+      "lng": 95.414005,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 21,
+      "nama": "HALTE BARATA",
+      "lat": 5.552143,
+      "lng": 95.318819,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 22,
+      "nama": "HALTE MUSEUM TSUNAMI",
+      "lat": 5.548495,
+      "lng": 95.31414,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 27,
+      "nama": "HALTE PORTABLE DEPAN SMA 1 BLPD",
+      "lat": 5.552408,
+      "lng": 95.312943,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 33,
+      "nama": "HALTE PORTABLE LAB SCHOOL UNSYIAH",
+      "lat": 5.574398,
+      "lng": 95.365406,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 34,
+      "nama": "HALTE LAMBARO (DEPAN YAMAHA)",
+      "lat": 5.50738,
+      "lng": 95.356315,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 35,
+      "nama": "HALTE PUNGE 2 (DEPAN KANTOR WIKA)",
+      "lat": 5.550533,
+      "lng": 95.30657,
+      "koridor": "Koridor 2"
+    }
+  ],
+  "koridor_3": [
+    {
+      "no": 1,
+      "nama": "HALTE MUSEUM ACEH",
+      "lat": 5.549426,
+      "lng": 95.320457,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 2,
+      "nama": "HALTE GUNONGAN (1)",
+      "lat": 5.545646,
+      "lng": 95.315278,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 3,
+      "nama": "HALTE GUNONGAN (2) (Depan Kuburan Kierkoff)",
+      "lat": 5.54606,
+      "lng": 95.315273,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 4,
+      "nama": "HALTE SEULAWAH",
+      "lat": 5.541205,
+      "lng": 95.310541,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 5,
+      "nama": "HALTE PASAR SETUI (1)",
+      "lat": 5.539242,
+      "lng": 95.309068,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 6,
+      "nama": "HALTE PASAR SETUI (2)",
+      "lat": 5.539675,
+      "lng": 95.309062,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 7,
+      "nama": "HALTE TEUKU UMAR (1) (Depan Masjid Teuku Umar)",
+      "lat": 5.537549,
+      "lng": 95.307415,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 8,
+      "nama": "HALTE TEUKU UMAR (2) (Samping Suzuya Mall)",
+      "lat": 5.538168,
+      "lng": 95.307633,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 9,
+      "nama": "HALTE GEUCEU (1) (Depan RS. Fakinah)",
+      "lat": 5.529809,
+      "lng": 95.303627,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 10,
+      "nama": "HALTE GEUCEU (2) (Seberang RS. Fakinah)",
+      "lat": 5.530125,
+      "lng": 95.303501,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 11,
+      "nama": "HALTE ASRAMA TNI (1) (Depan Zidam Iskandar Muda)",
+      "lat": 5.523261,
+      "lng": 95.30263,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 12,
+      "nama": "HALTE ASRAMA TNI (2) (Depan Asrama Perwira TNI)",
+      "lat": 5.52332,
+      "lng": 95.302452,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 13,
+      "nama": "HALTE KEUTAPANG (1) (Depan KFC)",
+      "lat": 5.517501,
+      "lng": 95.303551,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 14,
+      "nama": "HALTE KETAPANG (2) (Depan Bank Mandiri)",
+      "lat": 5.514303,
+      "lng": 95.303392,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 15,
+      "nama": "HALTE TVRI (1)",
+      "lat": 5.508944,
+      "lng": 95.303334,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 16,
+      "nama": "HALTE TVRI (2)",
+      "lat": 5.508934,
+      "lng": 95.303205,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 17,
+      "nama": "HALTE MUHAMMADIYAH (Depan Masjid Muhammadiyah)",
+      "lat": 5.553305,
+      "lng": 95.31404,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 18,
+      "nama": "HALTE MATA IE (Depan Kolam Mata Ie)",
+      "lat": 5.496592,
+      "lng": 95.296385,
+      "koridor": "Koridor 3"
+    }
+  ],
+  "koridor_5": [
+    {
+      "no": 1,
+      "nama": "HALTE KESDAM 1 (Depan RS. Kesdam)",
+      "lat": 5.55505,
+      "lng": 95.324288,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 2,
+      "nama": "HALTE KESDAM 2 (Depan Kantor Pos)",
+      "lat": 5.555414,
+      "lng": 95.325603,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 3,
+      "nama": "HALTE KUTA ALAM 1 (Depan Masjid Babuttaqwa)",
+      "lat": 5.554665,
+      "lng": 95.329638,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 4,
+      "nama": "HALTE KUTA ALAM 2 (Depan Asrama TNI)",
+      "lat": 5.554686,
+      "lng": 95.329473,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 5,
+      "nama": "HALTE HERMES 1 (Depan Rumah Cut Zein)",
+      "lat": 5.553984,
+      "lng": 95.332866,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 6,
+      "nama": "HALTE HERMES 2",
+      "lat": 5.553875,
+      "lng": 95.332354,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 7,
+      "nama": "HALTE BPKP 1",
+      "lat": 5.553621,
+      "lng": 95.343309,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 8,
+      "nama": "HALTE BPKP 2 (Depan Panglong Kayu)",
+      "lat": 5.553429,
+      "lng": 95.343173,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 9,
+      "nama": "HALTE SD 56 (1)",
+      "lat": 5.551848,
+      "lng": 95.352067,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 10,
+      "nama": "HALTE SD 56 (2)",
+      "lat": 5.551666,
+      "lng": 95.352448,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 11,
+      "nama": "HALTE ULEE KARENG 1 (Depan Gudang Donya)",
+      "lat": 5.551641,
+      "lng": 95.35487,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 12,
+      "nama": "HALTE ULEE KARENG 2 (Masjid Baitussalihin)",
+      "lat": 5.551371,
+      "lng": 95.355865,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 13,
+      "nama": "HALTE BABUSSALAM 1 (Depan Masjid As Syifa)",
+      "lat": 5.546598,
+      "lng": 95.36281,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 14,
+      "nama": "HALTE BABUSSALAM 2 (Lewat Masjid As Syifa)",
+      "lat": 5.544462,
+      "lng": 95.365203,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 15,
+      "nama": "HALTE ABULYATAMA 1",
+      "lat": 5.531089,
+      "lng": 95.38773,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 16,
+      "nama": "HALTE ABULYATAMA 2 (Depan Pesantren Baitussabri)",
+      "lat": 5.530865,
+      "lng": 95.388305,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 17,
+      "nama": "HALTE LAM ATEUK 1 (Lewat Dayah Lam Ateuk)",
+      "lat": 5.532918,
+      "lng": 95.393197,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 18,
+      "nama": "HALTE LAM ATEUK 2 (Smpng Dayah Lam Ateuk)",
+      "lat": 5.5317,
+      "lng": 95.391097,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 19,
+      "nama": "HALTE BUENG CALA 1 (Depan SD Bueng Cala)",
+      "lat": 5.528145,
+      "lng": 95.407072,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 20,
+      "nama": "HALTE BUENG CALA 2 (Depan Komplek Rumah Perhubungan)",
+      "lat": 5.526318,
+      "lng": 95.401094,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 21,
+      "nama": "HALTE BLANG BINTANG 1",
+      "lat": 5.525412,
+      "lng": 95.414448,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 22,
+      "nama": "HALTE BLANG BINTANG 2",
+      "lat": 5.525502,
+      "lng": 95.414161,
+      "koridor": "Koridor 5"
+    }
+  ],
+  "all_halte": [
+    {
+      "no": 1,
+      "nama": "HALTE KEUDAH",
+      "lat": 5.559781,
+      "lng": 95.317649,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 2,
+      "nama": "HALTE PORTABLE MASJID RAYA",
+      "lat": 5.553979,
+      "lng": 95.31854,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 3,
+      "nama": "HALTE SP. LIMA",
+      "lat": 5.556597,
+      "lng": 95.323211,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 4,
+      "nama": "HALTE KP. KEURAMAT",
+      "lat": 5.55821,
+      "lng": 95.327378,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 5,
+      "nama": "HALTE PORTABLE SP. JAMBO TAPE",
+      "lat": 5.559729,
+      "lng": 95.330911,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 6,
+      "nama": "HALTE RSUZA",
+      "lat": 5.565763,
+      "lng": 95.337352,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 7,
+      "nama": "HALTE KANTOR GUB. ACEH",
+      "lat": 5.571251,
+      "lng": 95.342931,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 8,
+      "nama": "HALTE LINGKE",
+      "lat": 5.575517,
+      "lng": 95.34732,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 9,
+      "nama": "HALTE PORTABLE SP. MESRA",
+      "lat": 5.58042,
+      "lng": 95.353206,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 10,
+      "nama": "HALTE PORTABLE LAMNYONG",
+      "lat": 5.575038,
+      "lng": 95.35543,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 11,
+      "nama": "HALTE FAKULTAS TEKNIK",
+      "lat": 5.566064,
+      "lng": 95.366778,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 12,
+      "nama": "HALTE FAKULTAS KEDOKTERAN",
+      "lat": 5.564918,
+      "lng": 95.372027,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 13,
+      "nama": "HALTE PORTABLE FAKULTAS PERTANIAN",
+      "lat": 5.566133,
+      "lng": 95.371822,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 14,
+      "nama": "HALTE MASJID JAMI'",
+      "lat": 5.571456,
+      "lng": 95.371424,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 15,
+      "nama": "HALTE PORTABLE SMA LIMA",
+      "lat": 5.574906,
+      "lng": 95.367055,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 16,
+      "nama": "HALTE LAMNYONG",
+      "lat": 5.575536,
+      "lng": 95.355065,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 17,
+      "nama": "HALTE SP. MESRA",
+      "lat": 5.579951,
+      "lng": 95.352974,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 18,
+      "nama": "HALTE PRADA",
+      "lat": 5.573958,
+      "lng": 95.345972,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 19,
+      "nama": "HALTE DPKA",
+      "lat": 5.570738,
+      "lng": 95.342698,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 20,
+      "nama": "HALTE RSUZA",
+      "lat": 5.564713,
+      "lng": 95.336554,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 21,
+      "nama": "HALTE PORTABLE JAMBO TAPE",
+      "lat": 5.559908,
+      "lng": 95.33142,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 22,
+      "nama": "HALTE KP. KEURAMAT",
+      "lat": 5.55795,
+      "lng": 95.327167,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 23,
+      "nama": "HALTE PORTABLE SP. LIMA",
+      "lat": 5.556219,
+      "lng": 95.322956,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 24,
+      "nama": "HALTE PEUNAYONG",
+      "lat": 5.558637,
+      "lng": 95.318945,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 25,
+      "nama": "HALTE PORTABLE EKONOMI UNSYIAH",
+      "lat": 5.573954,
+      "lng": 95.365612,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 26,
+      "nama": "HALTE PORTABLE BEURABONG",
+      "lat": 5.568054,
+      "lng": 95.377066,
+      "koridor": "Koridor 1"
+    },
+    {
+      "no": 1,
+      "nama": "HALTE PELABUHAN ULEE LHEUE TIPE A",
+      "lat": 5.564047,
+      "lng": 95.292068,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 2,
+      "nama": "HALTE KUBURAN MASSAL 1 ULEE LHEUE",
+      "lat": 5.555766,
+      "lng": 95.285874,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 3,
+      "nama": "HALTE KUBURAN MASSAL 2 ULEE LHEUE (seberang)",
+      "lat": 5.555576,
+      "lng": 95.285798,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 4,
+      "nama": "HALTE PUNGE 1 (Seberang kantor WIKA)",
+      "lat": 5.550702,
+      "lng": 95.306764,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 5,
+      "nama": "HALTE PASAR ACEH BARU",
+      "lat": 5.555505,
+      "lng": 95.31606,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 6,
+      "nama": "HALTE MASJID RAYA BAITURRAHMAN",
+      "lat": 5.554093,
+      "lng": 95.318361,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 7,
+      "nama": "HALTE Sp. SURABAYA 1 (depan Dunia Barusa)",
+      "lat": 5.542107,
+      "lng": 95.330246,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 8,
+      "nama": "HALTE Sp. SURABAYA 2 (depan Wong Solo)",
+      "lat": 5.547179,
+      "lng": 95.330122,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 9,
+      "nama": "HALTE Sp. BATOH 1 (Simpang AMD)",
+      "lat": 5.534133,
+      "lng": 95.330384,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 10,
+      "nama": "HALTE Sp. BATOH 2 (seberang SPBU BATOH)",
+      "lat": 5.535071,
+      "lng": 95.330133,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 11,
+      "nama": "HALTE DEPAN TERMINAL BATOH 1",
+      "lat": 5.529697,
+      "lng": 95.330137,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 12,
+      "nama": "HALTE DEPAN TERMINAL BATOH 2 (seberang)",
+      "lat": 5.529722,
+      "lng": 95.330331,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 13,
+      "nama": "HALTE DARUL IMARAH 1 (Depan SMA 1 DARUL IMARAH)",
+      "lat": 5.514488,
+      "lng": 95.331001,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 14,
+      "nama": "HALTE DARUL IMARAH 2 (Sp. LAMPEUNEURUT)",
+      "lat": 5.514853,
+      "lng": 95.330035,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 15,
+      "nama": "HALTE SIRON 1 (DEPAN SD SIRON)",
+      "lat": 5.511284,
+      "lng": 95.362883,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 16,
+      "nama": "HALTE SIRON 2 (DEPAN CLINIC PMI SIRON)",
+      "lat": 5.511184,
+      "lng": 95.363218,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 17,
+      "nama": "HALTE GANI 1 (DEPAN SD GANI)",
+      "lat": 5.513257,
+      "lng": 95.380454,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 18,
+      "nama": "HALTE GANI 2 (DEPAN PUSTU GANI)",
+      "lat": 5.513257,
+      "lng": 95.380454,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 19,
+      "nama": "HALTE BLANG BINTANG 1 (depan Masjid)",
+      "lat": 5.510991,
+      "lng": 95.41392,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 20,
+      "nama": "HALTE BLANG BINTANG 2 (bundaran LANUD)",
+      "lat": 5.510519,
+      "lng": 95.414005,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 21,
+      "nama": "HALTE BARATA",
+      "lat": 5.552143,
+      "lng": 95.318819,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 22,
+      "nama": "HALTE MUSEUM TSUNAMI",
+      "lat": 5.548495,
+      "lng": 95.31414,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 27,
+      "nama": "HALTE PORTABLE DEPAN SMA 1 BLPD",
+      "lat": 5.552408,
+      "lng": 95.312943,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 33,
+      "nama": "HALTE PORTABLE LAB SCHOOL UNSYIAH",
+      "lat": 5.574398,
+      "lng": 95.365406,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 34,
+      "nama": "HALTE LAMBARO (DEPAN YAMAHA)",
+      "lat": 5.50738,
+      "lng": 95.356315,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 35,
+      "nama": "HALTE PUNGE 2 (DEPAN KANTOR WIKA)",
+      "lat": 5.550533,
+      "lng": 95.30657,
+      "koridor": "Koridor 2"
+    },
+    {
+      "no": 1,
+      "nama": "HALTE MUSEUM ACEH",
+      "lat": 5.549426,
+      "lng": 95.320457,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 2,
+      "nama": "HALTE GUNONGAN (1)",
+      "lat": 5.545646,
+      "lng": 95.315278,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 3,
+      "nama": "HALTE GUNONGAN (2) (Depan Kuburan Kierkoff)",
+      "lat": 5.54606,
+      "lng": 95.315273,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 4,
+      "nama": "HALTE SEULAWAH",
+      "lat": 5.541205,
+      "lng": 95.310541,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 5,
+      "nama": "HALTE PASAR SETUI (1)",
+      "lat": 5.539242,
+      "lng": 95.309068,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 6,
+      "nama": "HALTE PASAR SETUI (2)",
+      "lat": 5.539675,
+      "lng": 95.309062,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 7,
+      "nama": "HALTE TEUKU UMAR (1) (Depan Masjid Teuku Umar)",
+      "lat": 5.537549,
+      "lng": 95.307415,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 8,
+      "nama": "HALTE TEUKU UMAR (2) (Samping Suzuya Mall)",
+      "lat": 5.538168,
+      "lng": 95.307633,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 9,
+      "nama": "HALTE GEUCEU (1) (Depan RS. Fakinah)",
+      "lat": 5.529809,
+      "lng": 95.303627,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 10,
+      "nama": "HALTE GEUCEU (2) (Seberang RS. Fakinah)",
+      "lat": 5.530125,
+      "lng": 95.303501,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 11,
+      "nama": "HALTE ASRAMA TNI (1) (Depan Zidam Iskandar Muda)",
+      "lat": 5.523261,
+      "lng": 95.30263,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 12,
+      "nama": "HALTE ASRAMA TNI (2) (Depan Asrama Perwira TNI)",
+      "lat": 5.52332,
+      "lng": 95.302452,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 13,
+      "nama": "HALTE KEUTAPANG (1) (Depan KFC)",
+      "lat": 5.517501,
+      "lng": 95.303551,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 14,
+      "nama": "HALTE KETAPANG (2) (Depan Bank Mandiri)",
+      "lat": 5.514303,
+      "lng": 95.303392,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 15,
+      "nama": "HALTE TVRI (1)",
+      "lat": 5.508944,
+      "lng": 95.303334,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 16,
+      "nama": "HALTE TVRI (2)",
+      "lat": 5.508934,
+      "lng": 95.303205,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 17,
+      "nama": "HALTE MUHAMMADIYAH (Depan Masjid Muhammadiyah)",
+      "lat": 5.553305,
+      "lng": 95.31404,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 18,
+      "nama": "HALTE MATA IE (Depan Kolam Mata Ie)",
+      "lat": 5.496592,
+      "lng": 95.296385,
+      "koridor": "Koridor 3"
+    },
+    {
+      "no": 1,
+      "nama": "HALTE KESDAM 1 (Depan RS. Kesdam)",
+      "lat": 5.55505,
+      "lng": 95.324288,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 2,
+      "nama": "HALTE KESDAM 2 (Depan Kantor Pos)",
+      "lat": 5.555414,
+      "lng": 95.325603,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 3,
+      "nama": "HALTE KUTA ALAM 1 (Depan Masjid Babuttaqwa)",
+      "lat": 5.554665,
+      "lng": 95.329638,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 4,
+      "nama": "HALTE KUTA ALAM 2 (Depan Asrama TNI)",
+      "lat": 5.554686,
+      "lng": 95.329473,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 5,
+      "nama": "HALTE HERMES 1 (Depan Rumah Cut Zein)",
+      "lat": 5.553984,
+      "lng": 95.332866,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 6,
+      "nama": "HALTE HERMES 2",
+      "lat": 5.553875,
+      "lng": 95.332354,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 7,
+      "nama": "HALTE BPKP 1",
+      "lat": 5.553621,
+      "lng": 95.343309,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 8,
+      "nama": "HALTE BPKP 2 (Depan Panglong Kayu)",
+      "lat": 5.553429,
+      "lng": 95.343173,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 9,
+      "nama": "HALTE SD 56 (1)",
+      "lat": 5.551848,
+      "lng": 95.352067,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 10,
+      "nama": "HALTE SD 56 (2)",
+      "lat": 5.551666,
+      "lng": 95.352448,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 11,
+      "nama": "HALTE ULEE KARENG 1 (Depan Gudang Donya)",
+      "lat": 5.551641,
+      "lng": 95.35487,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 12,
+      "nama": "HALTE ULEE KARENG 2 (Masjid Baitussalihin)",
+      "lat": 5.551371,
+      "lng": 95.355865,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 13,
+      "nama": "HALTE BABUSSALAM 1 (Depan Masjid As Syifa)",
+      "lat": 5.546598,
+      "lng": 95.36281,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 14,
+      "nama": "HALTE BABUSSALAM 2 (Lewat Masjid As Syifa)",
+      "lat": 5.544462,
+      "lng": 95.365203,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 15,
+      "nama": "HALTE ABULYATAMA 1",
+      "lat": 5.531089,
+      "lng": 95.38773,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 16,
+      "nama": "HALTE ABULYATAMA 2 (Depan Pesantren Baitussabri)",
+      "lat": 5.530865,
+      "lng": 95.388305,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 17,
+      "nama": "HALTE LAM ATEUK 1 (Lewat Dayah Lam Ateuk)",
+      "lat": 5.532918,
+      "lng": 95.393197,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 18,
+      "nama": "HALTE LAM ATEUK 2 (Smpng Dayah Lam Ateuk)",
+      "lat": 5.5317,
+      "lng": 95.391097,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 19,
+      "nama": "HALTE BUENG CALA 1 (Depan SD Bueng Cala)",
+      "lat": 5.528145,
+      "lng": 95.407072,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 20,
+      "nama": "HALTE BUENG CALA 2 (Depan Komplek Rumah Perhubungan)",
+      "lat": 5.526318,
+      "lng": 95.401094,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 21,
+      "nama": "HALTE BLANG BINTANG 1",
+      "lat": 5.525412,
+      "lng": 95.414448,
+      "koridor": "Koridor 5"
+    },
+    {
+      "no": 22,
+      "nama": "HALTE BLANG BINTANG 2",
+      "lat": 5.525502,
+      "lng": 95.414161,
+      "koridor": "Koridor 5"
+    }
+  ]
+}

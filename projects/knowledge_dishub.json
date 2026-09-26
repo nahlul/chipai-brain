@@ -1,0 +1,25 @@
+{
+  "instansi": "Dinas Perhubungan Aceh",
+  "layanan_utama": [
+    "Bus Trans Koetaradja (Angkutan Umum Gratis)",
+    "Pengujian Kendaraan Bermotor (Uji KIR)",
+    "Perizinan Trayek & Angkutan Barang",
+    "Manajemen Rekayasa Lalu Lintas & Rambu Jalan",
+    "Pelayanan Pelabuhan Penyeberangan Ulee Lheue"
+  ],
+  "trans_koetaradja": {
+    "tarif": "Gratis 100% (cukup tap kartu/e-money untuk pencatatan)",
+    "jam_operasional": "06.30 - 18.30 WIB",
+    "koridor_utama": {
+      "koridor_1": "Pusat Kota (Keudah) - Darussalam (USK / UIN)",
+      "koridor_2A": "Pusat Kota - Bandara Sultan Iskandar Muda (via Terminal Batoh & Lambaro)",
+      "koridor_2B": "Pusat Kota - Pelabuhan Ulee Lheue",
+      "koridor_3A_3B": "Pusat Kota - Mata Ie / Lhoknga"
+    }
+  },
+  "kontak_dan_lokasi": {
+    "alamat": "Jl. Teuku Nyak Arief No. 22, Jeulingke, Kec. Syiah Kuala, Banda Aceh",
+    "jam_kantor": "Senin - Jumat: 08.00 - 16.30 WIB",
+    "portal_web": "dishub.acehprov.go.id"
+  }
+}
