@@ -168,3 +168,38 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPDN5dCmxiXigHxtQVAZNpRzB+RyUApo0QUFG67RyWiK
 - Verifikasi headless browser di `http://104.64.215.247:3000/admin/routes` dan `/rute`: login sukses, CRUD & reorder rute/halte bekerja, data test dibersihkan, halaman `/rute` sinkron dengan database.
 - Commit implementasi fitur: `03e51f9` pada `nahlul/chipai-brain` branch `main`.
 
+---
+
+## [2026-11-25] Rencana Migrasi Home Server (Revisi Spek & Budget Nyata)
+
+### Yang Mulia bagikan
+- WiFi: **Rp 2.000.000 / TAHUN** (~Rp 166.666 / bulan).
+- Hardware server (estimasi Rp 2.500.000 sekali beli):
+  - Processor: Intel Core i5-4570 (LGA 1150)
+  - Motherboard: H81 LGA 1150
+  - RAM: DDR3 8GB 1600MHz
+  - Storage: SSD SATA 256GB
+  - Casing: Micro ATX / jadul
+  - PSU: 400–450W
+- Budget / patokan listrik: Rp 200.000 / bulan.
+- Kapasitas listrik rumah: **4 Ampere** (900 VA / ~880–900 W maksimal MCB).
+- Opsi koneksi yang dipertimbangkan: **internet inject-an** (tunneling/kuota seluler).
+- Langganan AI: Rp 150.000 / bulan.
+- Pertanyaan Yang Mulia: Berapa pengeluaran per bulan dari listrik saja dan ditambah langganan AI, perbandingan spek i5-4570 vs VPS aktif, serta ketertarikan ke Mini PC Lenovo ThinkCentre untuk menekan beban 4A.
+
+---
+
+## [2026-11-25] Setup Tools Pembuatan Dokumen Word, Excel, PowerPoint, & PDF
+
+### Permintaan Yang Mulia Nahlul
+- Meminta Chip menyiapkan & menginstall seluruh kebutuhan untuk membuat dokumen **Word (`.docx`)** dan **Excel (`.xlsx`)** agar nanti Yang Mulia tinggal memberi perintah.
+
+### Komponen yang terpasang & terverifikasi
+- Hermes documents venv: `/root/.hermes/environments/documents/gen-980ad4fc39ae459b9cac9a0d7d1c24da/venv/bin/python`
+  - `python-docx==1.2.0`
+  - `openpyxl==3.1.5`
+  - `python-pptx==1.0.2`
+  - `reportlab`, `pypdf`, `pdfplumber`, `pypdfium2`
+- Paket OS: `libreoffice-writer-nogui`, `libreoffice-calc-nogui`, `libreoffice-impress-nogui` (`LibreOffice 24.2.7.2`), `poppler-utils` (`pdftoppm 24.02.0`), `fonts-dejavu-core`, `fonts-liberation`.
+- Smoke test lulus: validasi `.docx`, hitung ulang formula `.xlsx` (`=SUM(B2:B3)`), dan ekspor ke `.pdf` via `soffice --headless` berjalan bersih tanpa error.
+
