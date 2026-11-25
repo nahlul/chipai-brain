@@ -78,9 +78,15 @@ const NearestHalte = () => {
       (err) => {
         setStatus('error');
         if (err.code === err.PERMISSION_DENIED) {
-          setError(
-            'Izin akses lokasi ditolak oleh browser. Mohon aktifkan izin lokasi di pengaturan browser Anda untuk mencari halte terdekat.'
-          );
+          if (typeof window !== 'undefined' && !window.isSecureContext) {
+            setError(
+              'Akses GPS diblokir otomatis oleh browser karena web dibuka lewat HTTP biasa (belum HTTPS / SSL). Browser modern mewajibkan koneksi HTTPS yang aman untuk meminta izin lokasi GPS.'
+            );
+          } else {
+            setError(
+              'Izin akses lokasi ditolak oleh browser. Mohon aktifkan izin lokasi di pengaturan browser Anda (ikon gembok/setelan situs di samping alamat web) untuk mencari halte terdekat.'
+            );
+          }
         } else if (err.code === err.POSITION_UNAVAILABLE) {
           setError('Sinyal GPS atau lokasi Anda tidak dapat ditemukan saat ini.');
         } else if (err.code === err.TIMEOUT) {

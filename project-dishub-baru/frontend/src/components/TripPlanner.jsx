@@ -194,7 +194,13 @@ const TripPlanner = () => {
       },
       (err) => {
         setLocating(false);
-        setError('Gagal mengakses lokasi GPS Anda. Silakan ketik halte asal secara manual.');
+        if (typeof window !== 'undefined' && !window.isSecureContext) {
+          setError(
+            'Akses GPS diblokir browser karena web masih dibuka via HTTP (belum HTTPS). Silakan ketik nama halte asal secara manual.'
+          );
+        } else {
+          setError('Gagal mengakses lokasi GPS Anda. Silakan ketik halte asal secara manual.');
+        }
       },
       { enableHighAccuracy: true, timeout: 10000 }
     );

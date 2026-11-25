@@ -203,3 +203,17 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPDN5dCmxiXigHxtQVAZNpRzB+RyUApo0QUFG67RyWiK
 - Paket OS: `libreoffice-writer-nogui`, `libreoffice-calc-nogui`, `libreoffice-impress-nogui` (`LibreOffice 24.2.7.2`), `poppler-utils` (`pdftoppm 24.02.0`), `fonts-dejavu-core`, `fonts-liberation`.
 - Smoke test lulus: validasi `.docx`, hitung ulang formula `.xlsx` (`=SUM(B2:B3)`), dan ekspor ke `.pdf` via `soffice --headless` berjalan bersih tanpa error.
 
+---
+
+## [2026-11-25] Penentuan Judul Laporan/PPT & Diagnosa Geolocation Non-HTTPS (`project-dishub-baru`)
+
+### Catatan Penamaan Proyek
+- Yang Mulia Nahlul meminta opsi judul **formal untuk Laporan dan Cover PowerPoint** proyek Trans Koetaradja (opsi resmi Dishub, akademik, dan ringkas eksekutif).
+
+### Temuan & Perbaikan Masalah Izin Lokasi GPS
+- **Gejala:** Saat menekan **"Izinkan & Cari Halte Terdekat"** (`NearestHalte.jsx`) atau **"Lokasi Saya (Halte Terdekat)"** (`TripPlanner.jsx`) di `http://104.64.215.247:3000/rute`, browser tidak memunculkan popup permintaan izin lokasi dan langsung menolak.
+- **Root Cause (Terverifikasi):** Browser modern memblokir `navigator.geolocation` pada origin non-HTTPS selain `localhost`/`127.0.0.1` (`window.isSecureContext === false`, error `code: 1`, `Only secure origins are allowed`), sehingga prompt izin tidak pernah dipanggil oleh browser.
+- **Perbaikan Frontend:** Memperbarui `NearestHalte.jsx` dan `TripPlanner.jsx` agar mendeteksi `!window.isSecureContext` dan menampilkan pesan error yang akurat (menjelaskan kewajiban HTTPS), bukan menyalahkan pengaturan izin browser pengguna.
+- **Verifikasi:** Build produksi sukses (`npm run build`), pesan HTTP terverifikasi di `http://104.64.215.247:3000/rute`, dan fitur pencarian halte terdekat terverifikasi berfungsi normal di secure context (`http://127.0.0.1:3000/rute`).
+
+
