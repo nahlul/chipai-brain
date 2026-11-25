@@ -40,9 +40,9 @@ def _iter_haltes(routes):
 
 @router.get("/")
 async def get_all_routes(db: AsyncIOMotorDatabase = Depends(get_db)):
-    """Get all route names and basic info"""
+    """Get all routes with halte list so public explorer shows stop counts & directions"""
     try:
-        routes = await db.bus_routes.find({}, {"_id": 0, "halte": 0}).to_list(100)
+        routes = await db.bus_routes.find({}, {"_id": 0}).sort([("order", 1), ("nama", 1)]).to_list(100)
         return routes
     except Exception as e:
         logger.error(f"Get routes error: {e}")
@@ -540,6 +540,185 @@ async def plan_trip(
     except Exception as e:
         logger.error(f"Plan trip error: {e}")
         raise HTTPException(status_code=500, detail="Gagal merencanakan perjalanan")
+
+
+# ============= ADMIN ROUTE MANAGEMENT =============
+import json
+import re
+from pathlib import Path
+from utils.auth_utils import get_current_user
+from utils.activity_utils import log_activity
+
+HALTE_COORDS_FILE = Path(__file__).resolve().parent.parent / "data" / "halte_coords.json"
+
+
+async def require_admin(request: Request, db: AsyncIOMotorDatabase):
+    return await get_current_user(request, db)
+
+
+def _clean_coord(value):
+    if value is None or value == "":
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _clean_jadwal(jadwal) -> dict:
+    if not isinstance(jadwal, dict):
+        return {}
+    cleaned = {}
+    for key in ("senin_kamis", "jumat", "sabtu", "minggu", "sabtu_minggu"):
+        val = jadwal.get(key)
+        if isinstance(val, list):
+            times = [str(t).strip() for t in val if str(t).strip()]
+            if times:
+                cleaned[key] = times
+        elif isinstance(val, str):
+            times = [t.strip() for t in val.replace("\n", ",").split(",") if t.strip()]
+            if times:
+                cleaned[key] = times
+    return cleaned
+
+
+def _clean_route_payload(payload: dict, route_id: str | None = None) -> dict:
+    """Normalize editable route data while keeping public route shape stable."""
+    allowed = {"nama", "warna", "deskripsi", "jam_operasi", "hari", "terminal_awal", "terminal_akhir", "halte", "order"}
+    data = {key: payload.get(key) for key in allowed if key in payload}
+    nama = str(data.get("nama") or "").strip()
+    if not nama:
+        raise HTTPException(status_code=422, detail="Nama rute wajib diisi")
+    data["nama"] = nama
+    data["warna"] = str(data.get("warna") or "#0284c7").strip() or "#0284c7"
+    data["deskripsi"] = str(data.get("deskripsi") or "").strip()
+    data["jam_operasi"] = str(data.get("jam_operasi") or "06:30 - 18:30").strip()
+    data["hari"] = str(data.get("hari") or "Senin - Minggu").strip()
+    data["terminal_awal"] = str(data.get("terminal_awal") or "").strip()
+    data["terminal_akhir"] = str(data.get("terminal_akhir") or "").strip()
+
+    raw_haltes = data.get("halte") or []
+    if not isinstance(raw_haltes, list):
+        raise HTTPException(status_code=422, detail="Data halte harus berupa daftar")
+    cleaned_haltes = []
+    for idx, halte in enumerate(raw_haltes):
+        if not isinstance(halte, dict):
+            raise HTTPException(status_code=422, detail=f"Format halte ke-{idx + 1} tidak valid")
+        h_nama = str(halte.get("nama") or "").strip()
+        h_arah = str(halte.get("arah") or "").strip()
+        if not h_nama or not h_arah:
+            raise HTTPException(status_code=422, detail=f"Halte ke-{idx + 1} wajib memiliki nama dan arah lintasan")
+        h_obj = {
+            "nama": h_nama,
+            "arah": h_arah,
+            "jadwal": _clean_jadwal(halte.get("jadwal")),
+        }
+        lat = _clean_coord(halte.get("lat"))
+        lng = _clean_coord(halte.get("lng"))
+        if lat is not None and lng is not None:
+            h_obj["lat"] = lat
+            h_obj["lng"] = lng
+        cleaned_haltes.append(h_obj)
+
+    data["halte"] = cleaned_haltes
+    if route_id:
+        data["id"] = route_id
+    return data
+
+
+@router.get("/admin/list")
+async def admin_list_routes(request: Request, db: AsyncIOMotorDatabase = Depends(get_db)):
+    await require_admin(request, db)
+    return await db.bus_routes.find({}, {"_id": 0}).sort([("order", 1), ("nama", 1)]).to_list(100)
+
+
+@router.get("/admin/halte-presets")
+async def admin_halte_presets(request: Request, db: AsyncIOMotorDatabase = Depends(get_db)):
+    await require_admin(request, db)
+    presets = {}
+    if HALTE_COORDS_FILE.exists():
+        try:
+            coords = json.loads(HALTE_COORDS_FILE.read_text(encoding="utf-8"))
+            for name, latlng in coords.items():
+                if isinstance(latlng, list) and len(latlng) == 2:
+                    presets[name] = {"nama": name, "lat": latlng[0], "lng": latlng[1]}
+        except Exception as e:
+            logger.warning(f"Failed loading halte_coords.json: {e}")
+
+    routes = await db.bus_routes.find({}, {"_id": 0, "halte": 1}).to_list(100)
+    for r in routes:
+        for h in r.get("halte", []):
+            name = (h.get("nama") or "").strip()
+            if name and name not in presets:
+                presets[name] = {
+                    "nama": name,
+                    "lat": h.get("lat"),
+                    "lng": h.get("lng"),
+                }
+            elif name and presets[name].get("lat") is None and h.get("lat") is not None:
+                presets[name]["lat"] = h.get("lat")
+                presets[name]["lng"] = h.get("lng")
+
+    return sorted(presets.values(), key=lambda x: x["nama"].lower())
+
+
+@router.post("/admin")
+async def admin_create_route(payload: dict, request: Request, db: AsyncIOMotorDatabase = Depends(get_db)):
+    await require_admin(request, db)
+    base_slug = re.sub(r"[^a-z0-9]+", "-", str(payload.get("id") or payload.get("nama") or "rute-baru").lower()).strip("-")
+    if not base_slug:
+        base_slug = "rute-baru"
+    route_id = base_slug
+    suffix = 2
+    while await db.bus_routes.find_one({"id": route_id}):
+        if payload.get("id"):
+            raise HTTPException(status_code=409, detail="ID rute sudah digunakan")
+        route_id = f"{base_slug}-{suffix}"
+        suffix += 1
+
+    count = await db.bus_routes.count_documents({})
+    route = _clean_route_payload(payload, route_id)
+    route.setdefault("order", count)
+    await db.bus_routes.insert_one(dict(route))
+    await log_activity(db, f"Menambahkan rute baru: {route['nama']}")
+    return route
+
+
+@router.put("/admin/reorder")
+async def admin_reorder_routes(payload: dict, request: Request, db: AsyncIOMotorDatabase = Depends(get_db)):
+    await require_admin(request, db)
+    route_ids = payload.get("route_ids") or []
+    if not isinstance(route_ids, list):
+        raise HTTPException(status_code=422, detail="route_ids harus berupa daftar")
+    for idx, rid in enumerate(route_ids):
+        await db.bus_routes.update_one({"id": rid}, {"$set": {"order": idx}})
+    await log_activity(db, "Mengubah urutan daftar rute koridor")
+    return {"message": "Urutan rute berhasil disimpan"}
+
+
+@router.put("/admin/{route_id}")
+async def admin_update_route(route_id: str, payload: dict, request: Request, db: AsyncIOMotorDatabase = Depends(get_db)):
+    await require_admin(request, db)
+    existing = await db.bus_routes.find_one({"id": route_id}, {"_id": 0})
+    if not existing:
+        raise HTTPException(status_code=404, detail="Rute tidak ditemukan")
+    route = _clean_route_payload(payload, route_id)
+    if "order" not in route and "order" in existing:
+        route["order"] = existing["order"]
+    await db.bus_routes.replace_one({"id": route_id}, dict(route))
+    await log_activity(db, f"Memperbarui rute {route['nama']} ({len(route['halte'])} halte)")
+    return route
+
+
+@router.delete("/admin/{route_id}")
+async def admin_delete_route(route_id: str, request: Request, db: AsyncIOMotorDatabase = Depends(get_db)):
+    await require_admin(request, db)
+    existing = await db.bus_routes.find_one({"id": route_id}, {"_id": 0, "nama": 1})
+    result = await db.bus_routes.delete_one({"id": route_id})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Rute tidak ditemukan")
+    await log_activity(db, f"Menghapus rute: {existing.get('nama', route_id) if existing else route_id}")
+    return {"message": "Rute berhasil dihapus"}
 
 
 @router.get("/{route_id}")

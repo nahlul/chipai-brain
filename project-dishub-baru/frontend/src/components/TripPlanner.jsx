@@ -21,6 +21,7 @@ import {
 import HalteMap from './HalteMap';
 
 const TripPlanner = () => {
+  const [liveRoutes, setLiveRoutes] = useState(TRANS_ROUTES);
   const [allHaltes, setAllHaltes] = useState([]);
   const [originText, setOriginText] = useState('');
   const [originHalte, setOriginHalte] = useState(null);
@@ -111,8 +112,22 @@ const TripPlanner = () => {
   };
 
   useEffect(() => {
-    const haltesList = getAllHaltesDirectoryClient();
-    setAllHaltes(haltesList);
+    let active = true;
+    setAllHaltes(getAllHaltesDirectoryClient('', currentDayKey(), TRANS_ROUTES));
+    routesAPI
+      .getAll()
+      .then((res) => {
+        if (active && Array.isArray(res.data) && res.data.length > 0) {
+          setLiveRoutes(res.data);
+          setAllHaltes(getAllHaltesDirectoryClient('', currentDayKey(), res.data));
+        }
+      })
+      .catch(() => {
+        // Fallback to static TRANS_ROUTES already set above
+      });
+    return () => {
+      active = false;
+    };
   }, []);
 
   const handleOriginChange = (val) => {
@@ -165,7 +180,8 @@ const TripPlanner = () => {
           pos.coords.latitude,
           pos.coords.longitude,
           1,
-          day
+          day,
+          liveRoutes
         );
         if (nearest && nearest.length) {
           const top = nearest[0];
@@ -256,6 +272,7 @@ const TripPlanner = () => {
         destLng: resolvedDest?.lng,
         destName: dstName,
         dayKey: day,
+        allRoutes: liveRoutes,
       });
 
       setResult(clientResult);

@@ -4,13 +4,14 @@ import { motion } from 'framer-motion';
 import AdminLayout from '@/components/AdminLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Newspaper, Images, Calendar, ArrowRight, Clock, Activity, Plus } from 'lucide-react';
-import { newsAPI, galleryAPI } from '@/lib/api';
+import { Newspaper, Images, Calendar, ArrowRight, Clock, Activity, Plus, Route as RouteIcon } from 'lucide-react';
+import { newsAPI, galleryAPI, routesAPI } from '@/lib/api';
 
 const AdminDashboard = () => {
   const [stats, setStats] = useState({
     totalNews: 0,
     totalGallery: 0,
+    totalRoutes: 0,
     recentNews: [],
   });
   const [loading, setLoading] = useState(true);
@@ -21,14 +22,16 @@ const AdminDashboard = () => {
 
   const fetchStats = async () => {
     try {
-      const [newsRes, galleryRes] = await Promise.all([
+      const [newsRes, galleryRes, routesRes] = await Promise.all([
         newsAPI.getAll(),
         galleryAPI.getAll(),
+        routesAPI.getAll(),
       ]);
 
       setStats({
         totalNews: newsRes.data.length,
         totalGallery: galleryRes.data.length,
+        totalRoutes: routesRes.data.length,
         recentNews: newsRes.data.slice(0, 3),
       });
     } catch (error) {
@@ -39,6 +42,13 @@ const AdminDashboard = () => {
   };
 
   const statCards = [
+    {
+      title: 'Rute & Koridor',
+      value: stats.totalRoutes,
+      icon: RouteIcon,
+      color: 'bg-emerald-600',
+      link: '/admin/routes',
+    },
     {
       title: 'Total Berita',
       value: stats.totalNews,
@@ -71,7 +81,13 @@ const AdminDashboard = () => {
             <h1 className="text-3xl font-bold text-gray-900">Dashboard Admin</h1>
             <p className="text-gray-600 mt-1">Selamat datang di panel admin Trans Koetaradja</p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
+            <Button asChild variant="outline" className="border-sky-200 text-sky-700 hover:bg-sky-50">
+              <Link to="/admin/routes">
+                <RouteIcon className="w-4 h-4 mr-2" />
+                Kelola Rute
+              </Link>
+            </Button>
             <Button asChild className="bg-sky-600 hover:bg-sky-700">
               <Link to="/admin/news">
                 <Plus className="w-4 h-4 mr-2" />
@@ -82,7 +98,7 @@ const AdminDashboard = () => {
         </div>
 
         {/* Stats Cards */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {statCards.map((stat, index) => {
             const Icon = stat.icon;
             return (

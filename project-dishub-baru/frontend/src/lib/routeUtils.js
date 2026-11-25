@@ -105,12 +105,12 @@ export function getTransitHubBadge(halteName = '') {
 /**
  * Get all OTHER corridors connecting at this transit stop
  */
-export function getConnectingCorridors(halteName = '', currentRouteId = '') {
+export function getConnectingCorridors(halteName = '', currentRouteId = '', allRoutes = TRANS_ROUTES) {
   if (!halteName) return [];
   const norm = halteName.trim().toLowerCase();
   const connectingMap = new Map();
 
-  for (const route of TRANS_ROUTES) {
+  for (const route of allRoutes) {
     if (route.id === currentRouteId) continue; // Skip current corridor
     for (const h of route.halte || []) {
       if (h.nama.trim().toLowerCase() === norm) {
@@ -155,11 +155,17 @@ export function getDirectionsForRoute(route) {
 /**
  * Calculate nearest haltes for user location
  */
-export function getNearestHaltesClient(userLat, userLng, limit = 5, dayKey = currentDayKey()) {
+export function getNearestHaltesClient(
+  userLat,
+  userLng,
+  limit = 5,
+  dayKey = currentDayKey(),
+  allRoutes = TRANS_ROUTES
+) {
   if (userLat == null || userLng == null) return [];
   const seenMap = new Map();
 
-  for (const route of TRANS_ROUTES) {
+  for (const route of allRoutes) {
     for (const h of route.halte || []) {
       if (h.lat == null || h.lng == null) continue;
       const dist = haversineKm(userLat, userLng, h.lat, h.lng);
@@ -213,11 +219,15 @@ export function getNearestHaltesClient(userLat, userLng, limit = 5, dayKey = cur
 /**
  * Get all haltes directory (deduplicated by name)
  */
-export function getAllHaltesDirectoryClient(query = '', dayKey = currentDayKey()) {
+export function getAllHaltesDirectoryClient(
+  query = '',
+  dayKey = currentDayKey(),
+  allRoutes = TRANS_ROUTES
+) {
   const seenMap = new Map();
   const q = (query || '').toLowerCase().trim();
 
-  for (const route of TRANS_ROUTES) {
+  for (const route of allRoutes) {
     for (const h of route.halte || []) {
       if (q && !h.nama.toLowerCase().includes(q)) continue;
 
@@ -270,10 +280,11 @@ export function planJourneyClient({
   destLng,
   destName,
   dayKey = 'senin_kamis',
+  allRoutes = TRANS_ROUTES,
 }) {
   // Extract all directed segments (raw directional segments)
   const segments = [];
-  for (const route of TRANS_ROUTES) {
+  for (const route of allRoutes) {
     if (!route.halte || route.halte.length === 0) continue;
     const dirs = getDirectionsForRoute(route);
     for (const dir of dirs) {

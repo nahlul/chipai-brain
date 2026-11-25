@@ -1,6 +1,21 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_BACKEND_URL || '';
+const resolveBackendUrl = () => {
+  const envUrl = process.env.REACT_APP_BACKEND_URL || '';
+  if (typeof window !== 'undefined' && envUrl) {
+    try {
+      const parsed = new URL(envUrl);
+      if (['localhost', '127.0.0.1'].includes(window.location.hostname) && parsed.port) {
+        return `${window.location.protocol}//${window.location.hostname}:${parsed.port}`;
+      }
+    } catch {
+      // ignore invalid URL
+    }
+  }
+  return envUrl;
+};
+
+const API_BASE_URL = resolveBackendUrl();
 
 // Create axios instance with default config
 const api = axios.create({
@@ -112,6 +127,14 @@ export const routesAPI = {
 
   geocode: (q) =>
     api.get(`/routes/geocode?q=${encodeURIComponent(q)}`, { withCredentials: false }),
+
+  // Admin route management
+  adminList: () => api.get('/routes/admin/list'),
+  adminPresets: () => api.get('/routes/admin/halte-presets'),
+  create: (data) => api.post('/routes/admin', data),
+  update: (id, data) => api.put(`/routes/admin/${id}`, data),
+  remove: (id) => api.delete(`/routes/admin/${id}`),
+  reorder: (routeIds) => api.put('/routes/admin/reorder', { route_ids: routeIds }),
 
   plan: ({ fromLat, fromLng, toLat, toLng, day, departAfter, fromName, toName }) => {
     const params = new URLSearchParams();

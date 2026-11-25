@@ -29,6 +29,7 @@ import AdminContact from "@/pages/admin/AdminContact";
 import AdminSocialMedia from "@/pages/admin/AdminSocialMedia";
 import AdminAbout from "@/pages/admin/AdminAbout";
 import AdminChangePassword from "@/pages/admin/AdminChangePassword";
+import AdminRoutes from "@/pages/admin/AdminRoutes";
 
 function App() {
   return (
@@ -101,6 +102,9 @@ function App() {
             <Route path="/admin/dashboard" element={
               <ProtectedRoute><AdminDashboard /></ProtectedRoute>
             } />
+            <Route path="/admin/routes" element={
+              <ProtectedRoute><AdminRoutes /></ProtectedRoute>
+            } />
             <Route path="/admin/news" element={
               <ProtectedRoute><AdminNews /></ProtectedRoute>
             } />
@@ -123,7 +127,7 @@ function App() {
             {/* 404 Page */}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-          <Toaster position="top-right" />
+          <Toaster position="bottom-right" />
         </AuthProvider>
       </BrowserRouter>
     </div>

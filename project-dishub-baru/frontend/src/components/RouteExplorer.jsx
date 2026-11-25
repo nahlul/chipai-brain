@@ -383,7 +383,7 @@ const RouteExplorer = () => {
 
                   {/* CONNECTING TRAYEK / TRANSIT BOX */}
                   {(() => {
-                    const connecting = getConnectingCorridors(halte.nama, selectedRoute.id);
+                    const connecting = getConnectingCorridors(halte.nama, selectedRoute.id, routes);
                     if (connecting.length === 0) return null;
 
                     return (
@@ -420,7 +420,7 @@ const RouteExplorer = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-6">
             <h4 className="text-2xl font-bold text-gray-900 mb-2">
-              Daftar 10 Koridor Trans Koetaradja
+              Daftar {routes.length} Koridor Trans Koetaradja
             </h4>
             <p className="text-sm text-gray-600 max-w-xl mx-auto">
               Setiap koridor dipisah secara sekuensial per arah lintasan (Arah Berangkat vs Arah Pulang). Klik koridor untuk melihat urutan halte dan jadwalnya.

@@ -139,3 +139,6 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPDN5dCmxiXigHxtQVAZNpRzB+RyUApo0QUFG67RyWiK
 
 
 
+
+- 2026-11-25: Menambahkan modul admin Kelola Rute & Halte di project-dishub-baru: CRUD koridor, CRUD halte, jadwal, koordinat, rename arah, reorder koridor/halte dengan tombol dan drag-drop, undo perubahan terakhir, route presets, serta route API publik kini mengembalikan urutan halte lengkap.
+- 2026-11-25: Memperbarui Header (navbar tab active fix & logo lokal /trans-logo.png), Footer redesign (executive dark navy, WCAG contrast AAA), sinkronisasi TripPlanner client-side BFS dengan data rute live dari backend, dan perbaikan kredensial admin login di VPS.

@@ -35,8 +35,8 @@ async def seed_routes(db):
         version = _data_version()
         meta = await db.route_seed_meta.find_one({"_id": "version"})
         count = await db.bus_routes.count_documents({})
-        if meta and meta.get("hash") == version and count > 0:
-            logger.info(f"Routes up to date ({count} routes, v{version}). Skipping.")
+        if count > 0:
+            logger.info(f"Routes already present in database ({count} routes). Skipping seed to preserve admin edits.")
             return
 
         logger.info("Seeding route data (data changed or first run)...")
