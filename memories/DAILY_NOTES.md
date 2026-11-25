@@ -135,10 +135,36 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPDN5dCmxiXigHxtQVAZNpRzB+RyUApo0QUFG67RyWiK
 - Armada uji: `Bus Test 01`, rute Banda Aceh → Medan, kapasitas 40.
 - Pendaftaran uji: `MDK-1`, BUDI SANTOSO, status `DITERIMA H-3`, bus 1.
 
+---
 
+## [2026-11-25] Redesign UI Publik & Fitur Kelola Rute Admin (`project-dishub-baru`)
 
+### Permintaan Yang Mulia Nahlul
+- Perbaiki tampilan Footer dan Header navbar agar rapi, selaras, tanpa tombol `Beranda` putih sendiri saat transparan, dan memakai logo lokal Trans Koetaradja.
+- Perbarui kredensial login admin panel Dishub Baru.
+- Tambahkan fitur **Kelola Rute & Halte** lengkap di panel admin (isi urutan halte tiap koridor seperti Ulee Kareng, Meudiwana, Ulee Lheue, dll., plus fitur ubah urutan, tambah, edit, hapus rute/halte) dan sinkronkan ke halaman publik.
 
+### Perubahan yang diterapkan
+- **UI Header & Footer (`frontend/src/components/Header.jsx`, `Footer.jsx`, `frontend/public/trans-logo.png`):**
+  - Menyalin aset logo lokal `/trans-logo.png` (81.358 bytes).
+  - Redesign Footer ke gaya deep navy executive transit 4 kolom dengan logo `brightness-0 invert`, kontras WCAG AAA, dan alamat rapi.
+  - Menyeragamkan styling/animasi 7 tab Header (`bg-white/20 text-white` saat hero transparan, `bg-sky-50 text-sky-700` saat solid/scroll, `aria-current="page"`).
+- **Auth Admin (`backend/.env`):**
+  - Menetapkan kredensial admin & `JWT_SECRET` di environment backend (tidak di-commit ke git), sinkron ke MongoDB `trans_koetaradja.admins`, sehingga login `/admin` berjalan normal tanpa HTTP 500.
+- **Backend Rute & Seeding (`backend/routes/route_routes.py`, `backend/seed_routes.py`):**
+  - Memperbaiki bug `GET /api/routes/` yang sebelumnya membuang field `halte` (`"halte": 0`) sehingga kartu `/rute` sempat tampil `0 Halte`.
+  - Menambahkan endpoint admin terlindungi cookie auth: `GET /routes/admin/list`, `GET /routes/admin/halte-presets`, `POST /routes/admin`, `PUT /routes/admin/{route_id}`, `DELETE /routes/admin/{route_id}`, `PUT /routes/admin/reorder` + logging aktivitas.
+  - Mengubah `seed_routes.py` agar hanya men-seed saat koleksi `bus_routes` kosong (`count == 0`) supaya editan admin tidak tertimpa saat restart backend.
+- **Panel Admin & Sinkronisasi Publik (`frontend/src/pages/admin/AdminRoutes.jsx`, `AdminLayout.jsx`, `AdminDashboard.jsx`, `App.js`, `lib/api.js`, `lib/routeUtils.js`, `components/RouteExplorer.jsx`, `components/TripPlanner.jsx`):**
+  - Menambahkan halaman `/admin/routes` (**Kelola Rute**) lengkap di sidebar dan kartu statistik `Rute & Koridor` di Dashboard.
+  - Mendukung CRUD koridor, ubah urutan koridor, CRUD halte, ubah urutan halte (tombol naik/turun + drag & drop), sisip halte, tambah/rename arah lintasan, input koordinat & jadwal (`senin_kamis`, `jumat`, `sabtu`, `minggu`), preset halte, pencarian, dan **Undo** perubahan terakhir.
+  - Memindahkan posisi `<Toaster />` ke `bottom-right` agar tidak menutupi tombol `Logout`, auto-scroll kartu koridor aktif, dan merapikan tombol edit arah di pill tab.
+  - Menyambungkan `RouteExplorer.jsx` dan `TripPlanner.jsx` (`liveRoutes`) ke data API terbaru serta memperbaiki `resolveBackendUrl` di `api.js` untuk `localhost`/`127.0.0.1` & IP publik.
 
+### Verifikasi nyata
+- Build frontend (`npm run build`): lulus (`main.1e2b36fb.js`, `main.43ba0817.css`).
+- Systemd `dishub-backend.service` (`8001`) & `dishub-frontend.service` (`3000`): aktif (`active`).
+- API publik `/api/routes/` mengembalikan 10 koridor lengkap dengan jumlah halte masing-masing (Ulee Kareng: 40, Meudiwana: 60, Ulee Lheue: 20, dst.).
+- Verifikasi headless browser di `http://104.64.215.247:3000/admin/routes` dan `/rute`: login sukses, CRUD & reorder rute/halte bekerja, data test dibersihkan, halaman `/rute` sinkron dengan database.
+- Commit implementasi fitur: `03e51f9` pada `nahlul/chipai-brain` branch `main`.
 
-- 2026-11-25: Menambahkan modul admin Kelola Rute & Halte di project-dishub-baru: CRUD koridor, CRUD halte, jadwal, koordinat, rename arah, reorder koridor/halte dengan tombol dan drag-drop, undo perubahan terakhir, route presets, serta route API publik kini mengembalikan urutan halte lengkap.
-- 2026-11-25: Memperbarui Header (navbar tab active fix & logo lokal /trans-logo.png), Footer redesign (executive dark navy, WCAG contrast AAA), sinkronisasi TripPlanner client-side BFS dengan data rute live dari backend, dan perbaikan kredensial admin login di VPS.
